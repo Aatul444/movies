@@ -1,0 +1,7 @@
+{
+  "name": "pikamovies",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
