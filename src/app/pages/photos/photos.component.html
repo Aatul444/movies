@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Insta Pics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <div class="userdetails">
+        <ion-thumbnail slot="start">
+          <ion-img [src]="item.thumbnail"></ion-img>
+        </ion-thumbnail>
+        <div class="nameNplace">
+          <ion-card-title>{{item.name}}</ion-card-title>
+          <ion-card-subtitle>{{item.place}}</ion-card-subtitle>
+        </div>
+        <div class="userEdits">
+          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-card-header>
+
+    <ion-list class="imageNicons">
+      <ion-item>
+        <ion-img [src]="item.src"></ion-img>
+        <!-- <ion-label>{{item.text}}</ion-label> -->
+      </ion-item>
+      <div class="likesharelist">
+        <ion-icon class="imageIcons" name="heart-outline"></ion-icon>
+        <ion-icon class="imageIcons" name="clipboard-outline"></ion-icon>
+        <ion-icon class="imageIcons" name="send-outline"></ion-icon>
+        <ion-icon class="imageIconsRight" name="bookmark-outline"></ion-icon>
+      </div>
+      <a>{{item.views}} views</a>
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="left" style="width: 25px; height:25px">
+      <ion-fab-button>Share</ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="logo-youtube"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+
+
+    </ion-fab>
+
+
+
+    <ion-card-content>
+      {{item.description}}
+    </ion-card-content>
+  
+  </ion-card>
+</ion-content>

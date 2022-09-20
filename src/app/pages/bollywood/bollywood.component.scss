@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    ion-input{
+        flex-grow: 3;
+    }
+}
+.header-inputBox{
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-left: 5%;
+    font-weight: bold;
+    color: white;
+}

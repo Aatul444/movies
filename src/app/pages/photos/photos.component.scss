@@ -1,0 +1,58 @@
+.userdetails {
+    display: flex;
+    // justify-content: space-between;
+    ion-thumbnail {
+        margin-right: 5px;
+
+        ion-img {
+            border-radius: 50%;
+            float: right
+        }
+    }
+}
+.userEdits {
+    width: 40px;
+    text-align: center;
+    padding: 6px 0 0 24px;
+    font-size: 16px;
+    margin: 0 0 0 19px;
+}
+// ion-fab-button{
+//     background-color: aquamarine;
+// }
+.imageNicons{
+display: flex;
+flex-direction: column;
+a{
+    padding: 2% 2% 0 5%;
+}
+    .nameNplace{
+        flex-grow: 1;
+    }
+.likesharelist{
+    // text-align: center;
+    justify-content: space-around; 
+    font-size: xx-large;
+    padding: 2% 2% 0 5%;
+}
+.imageIconsRight{
+    float: right;
+}
+.imageIcons{
+    margin: 0px 4% 0 1px;
+}
+}
+.nameNplace{
+    flex-grow: 1;
+}
+ion-icon{
+    cursor: pointer;
+}
+ion-card-content{
+    height: auto;
+    padding: 0 0 3% 0;
+    a{
+        width: fit-content;
+        height: 10vh;
+    }
+}

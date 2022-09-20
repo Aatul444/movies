@@ -1,16 +1,49 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { WeatherAppComponent } from './components/weather-app/weather-app.component';
+import { AutoFocusComponent } from './pages/auto-focus/auto-focus.component';
+import { BollywoodComponent } from './pages/bollywood/bollywood.component';
+import { HollywoodComponent } from './pages/hollywood/hollywood.component';
+import { MapsComponent } from './pages/maps/maps.component';
+import { PhotosComponent } from './pages/photos/photos.component';
+import { SongsComponent } from './pages/songs/songs.component';
+import { TalkshowComponent } from './pages/talkshow/talkshow.component';
+import { TollywoodComponent } from './pages/tollywood/tollywood.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    path:'',component:HollywoodComponent
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+    path:'map',component:MapsComponent
+  },
+  {
+    path:'bolly',component:BollywoodComponent
+  },
+  {
+    path:'holly',component:HollywoodComponent
+  },
+  {
+    path:'tolly',component:TollywoodComponent
+  },
+  {
+    path:'photos',component:PhotosComponent
+  },
+  {
+    path:'songs',component:SongsComponent
+  },
+  {
+    path:'talkshow',component:TalkshowComponent
+  },
+  {
+     path: 'weat', component: WeatherAppComponent 
+  },
+  {
+    path: 'autofocus', component: AutoFocusComponent 
+  },
+  { 
+    path: "**", component: PhotosComponent 
+  },
 ];
 
 @NgModule({
